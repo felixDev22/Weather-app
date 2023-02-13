@@ -1,0 +1,102 @@
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  justify-items: center;
+}
+
+.select-region {
+  padding: 0 5%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  color: #840d34;
+}
+
+select {
+  border-radius: 10px;
+  padding: 2% 4%;
+  background: #ef7aa1;
+}
+
+.row {
+  background-image: url(../../assets/hero01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: auto;
+  margin-top: 28px;
+  min-height: 35vh;
+  padding: 5%;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 180px;
+}
+
+.title p {
+  font-size: 1.6rem;
+}
+
+.intro h5 {
+  padding: 2% 5%;
+}
+
+.states {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.card {
+  background-image: url(../../assets/map05.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #db4781;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+
+.card i {
+  color: white;
+  transform: rotateY(180deg);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.card img {
+  width: 60%;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.data {
+  margin-top: 60px;
+}
+
+.card:nth-child(odd) {
+  background-color: #d04277;
+}
+
+.card:hover {
+  background-color: #840d34;
+}
