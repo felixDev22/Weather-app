@@ -9,7 +9,6 @@ export const getWeather = createAsyncThunk('weather/fetch', async () => {
   );
 
   const result = await response.json();
-  console.log(result);
   const weather = {
     id: result.id,
     name: result.name,
@@ -19,7 +18,6 @@ export const getWeather = createAsyncThunk('weather/fetch', async () => {
     temp: result.main.temp,
     wind: result.wind.speed,
   };
-  console.log(weather);
   return weather;
 });
 
