@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Homepage from './components/pages/Homepage';
+// import Homepage from './components/pages/Homepage';
 import Details from './components/pages/Details';
 import './App.css';
 
@@ -10,8 +10,8 @@ function App() {
     <div className="container">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/details" element={<Details />} />
+        {/* <Route path="/" element={<Homepage />} /> */}
+        <Route path="/" element={<Details />} />
       </Routes>
     </div>
   );
