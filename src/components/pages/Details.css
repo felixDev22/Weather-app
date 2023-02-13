@@ -58,7 +58,7 @@ h3 {
   justify-content: space-between;
   margin-bottom: 30px;
   padding: 1rem;
-  background-color: #b33a6a;
+  background-color: #d23775;
 }
 
 .d-card h4 {
@@ -66,7 +66,7 @@ h3 {
 }
 
 .d-card:nth-child(odd) {
-  background-color: #d74f86;
+  background-color: #b42860;
 }
 
 .empty {

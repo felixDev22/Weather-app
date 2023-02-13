@@ -41,7 +41,6 @@ export const getLocation = createAsyncThunk(
     };
   },
 );
-
 const initialState = {
   region: {},
   countries: [],
