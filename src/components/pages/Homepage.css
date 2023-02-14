@@ -44,6 +44,11 @@ h2 {
   margin-left: 180px;
 }
 
+.title span {
+  color: #840d34;
+  font-weight: 300;
+}
+
 .title p {
   font-size: 1.6rem;
 }
@@ -84,10 +89,6 @@ h2 {
 
 .c-card h2 {
   font-size: 1.5rem;
-}
-
-.data {
-  margin-top: 60px;
 }
 
 .c-card:nth-child(odd) {
