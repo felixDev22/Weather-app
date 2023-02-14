@@ -9,16 +9,19 @@
   top: 20px;
 }
 
+.data {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+}
+
 .data .flag {
   margin-top: 10px;
-  width: 50px;
+  width: 40px;
+  height: auto;
 }
 
-.data img {
-  width: 20%;
-  border-radius: 50%;
-}
-
-.data span {
+.data p {
   font-size: 0.9rem;
 }
