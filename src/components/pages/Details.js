@@ -26,49 +26,62 @@ const Details = () => {
           <div className="title">
             <h2>{weather.name}</h2>
             <h3>{weather.description}</h3>
+            <p>Current weather</p>
           </div>
         </div>
-        <div className="weather-info">
-          <div className="info">
-            <div className="d-card">
-              <h4 className="title">Humidity</h4>
-              <h3>{weather.humidity}</h3>
+        <div>
+          {weather.loading && <h1>Loading...</h1>}
+          {!weather.loading && weather.error ? (
+            <div>
+              Error:
+              {weather.error}
             </div>
+          ) : null}
+          {!weather.loading && weather.weather ? (
+            <div className="weather-info">
+              <div className="info">
+                <div className="d-card">
+                  <h4 className="title">Humidity</h4>
+                  <h3>{weather[0].humidity}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Pressure</h4>
-              <h3>{weather.pressure}</h3>
-            </div>
+                <div className="d-card">
+                  <h4 className="title">Pressure</h4>
+                  <h3>{weather[0].pressure}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Temp Min</h4>
-              <h3>{weather.temp_min}</h3>
-            </div>
+                <div className="d-card">
+                  <h4 className="title">Temp Min</h4>
+                  <h3>{weather[0].temp_min}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Temp Max</h4>
-              <h3>{weather.temp_max}</h3>
-            </div>
+                <div className="d-card">
+                  <h4 className="title">Temp Max</h4>
+                  <h3>{weather.temp_max}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Feels Like</h4>
-              <h3>{weather.wind}</h3>
-            </div>
+                <div className="d-card">
+                  <h4 className="title">Feels Like</h4>
+                  <h3>{weather[0].wind}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Wind</h4>
-              <h3>{weather.wind}</h3>
-            </div>
+                <div className="d-card">
+                  <h4 className="title">Wind</h4>
+                  <h3>{weather[0].wind}</h3>
+                </div>
 
-            <div className="d-card">
-              <h4 className="title">Visibility</h4>
-              <h3>{weather.visibility}</h3>
+                <div className="d-card">
+                  <h4 className="title">Visibility</h4>
+                  <h3>{weather[0].visibility}</h3>
+                </div>
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </>
     );
   }
+
   return <div className="container" />;
 };
 
