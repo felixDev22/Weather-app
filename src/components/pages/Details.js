@@ -78,7 +78,7 @@ const Details = () => {
       </>
     );
   }
-  return <div className="container">{weatherDetails}</div>;
+  return <div className="details-hero">{weatherDetails}</div>;
 };
 
 export default Details;
