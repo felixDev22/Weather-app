@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getWeather } from '../../redux/weatherApi';
 
 import './Details.css';
@@ -19,13 +19,22 @@ const Details = () => {
     }
   }, [dispatch, country]);
 
+  let weatherDetails = (
+    <div className="no-data">
+      <h3>No data found!!</h3>
+      <p>Please go back to</p>
+      <Link to="/">Home</Link>
+    </div>
+  );
+
   if (country && weather.name) {
-    return (
+    weatherDetails = (
       <>
         <div className="details-hero">
           <div className="title">
             <h2>{weather.name}</h2>
             <h3>{weather.description}</h3>
+            <p>Current weather</p>
           </div>
         </div>
         <div className="weather-info">
@@ -69,7 +78,7 @@ const Details = () => {
       </>
     );
   }
-  return <div className="container" />;
+  return <div className="container">{weatherDetails}</div>;
 };
 
 export default Details;

@@ -37,6 +37,7 @@ const Countries = () => {
         <div className="title">
           <h2>{region.name}</h2>
           <span>{`Countries: (${region.totalCountries})`}</span>
+          <p>Weather update</p>
           <div className="hero-back" />
         </div>
       </div>

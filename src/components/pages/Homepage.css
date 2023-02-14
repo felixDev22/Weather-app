@@ -5,7 +5,7 @@
 }
 
 .select-region {
-  padding: 0 5%;
+  padding: 0 10%;
   margin: 20px auto;
   display: flex;
   align-items: center;
@@ -21,19 +21,20 @@ select {
 }
 
 .row {
-  background-image: url(../../assets/hero01.jpg);
+  background-image: url(../../assets/home02.png);
   background-repeat: no-repeat;
   background-size: cover;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   width: 100%;
   height: auto;
   margin-top: 28px;
   min-height: 35vh;
   padding: 5%;
+  position: relative;
 }
 
 h2 {
-  color: #840d34;
+  color: #fff;
   font-size: 2rem;
   text-align: left;
 }
@@ -45,12 +46,13 @@ h2 {
 }
 
 .title span {
-  color: #840d34;
+  color: #fff;
   font-weight: 300;
 }
 
 .title p {
-  font-size: 1.6rem;
+  font-size: 1rem;
+  opacity: 50%;
 }
 
 .intro h5 {
@@ -62,7 +64,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
   cursor: pointer;
-  gap: 20px;
+  gap: 10px;
 }
 
 .c-card {

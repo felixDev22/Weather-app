@@ -9,7 +9,7 @@ const Country = ({ name, capital, flag }) => (
         <i className="fa-solid fa-chevron-left" id="arrow" />
         <div className="data">
           <h3>{name}</h3>
-          <span>{`Capital: ${capital}`}</span>
+          <p>{`Capital: ${capital}`}</p>
           <img src={flag} className="flag" alt={name} />
         </div>
       </div>
