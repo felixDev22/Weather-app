@@ -1,0 +1,24 @@
+.c-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#arrow {
+  position: absolute;
+  top: 20px;
+}
+
+.data .flag {
+  margin-top: 10px;
+  width: 50px;
+}
+
+.data img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.data span {
+  font-size: 0.9rem;
+}

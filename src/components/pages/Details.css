@@ -43,6 +43,10 @@ h3 {
   font-size: 1rem;
 }
 
+.title h3 {
+  color: #b42860;
+}
+
 .weather-info {
   width: 100%;
   background: #ec4c8a;

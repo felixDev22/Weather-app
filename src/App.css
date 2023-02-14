@@ -23,8 +23,9 @@ body {
 }
 
 .container {
-  max-width: 375px;
-  margin: 20px 5%;
+  min-width: 375px;
+  padding: 0 5%;
+  margin: 20px auto;
   height: 100vh;
 }
 
@@ -35,10 +36,8 @@ i {
   font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1120px) {
   .container {
-    background: #b13a68;
-    margin: 0 auto;
-    height: 100vh;
+    padding: 0 10%;
   }
 }
