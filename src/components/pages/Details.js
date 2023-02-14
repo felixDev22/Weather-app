@@ -1,38 +1,75 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { getWeather } from '../../redux/weatherApi';
+
 import './Details.css';
 
-const Details = () => (
-  <>
-    <div className="details-hero">
-      <div className="title">
-        <h2>Name</h2>
-        <h3>description</h3>
-      </div>
-    </div>
-    <div className="weather-info">
-      <div className="info">
-        <div className="d-card">
-          <h4 className="title">Humidity</h4>
-          <h3>36</h3>
-        </div>
+const Details = () => {
+  const weather = useSelector((state) => state.weather.weather);
+  const countries = useSelector((state) => state.countries.countries);
+  const { coutryName } = useParams();
+  const dispatch = useDispatch();
 
-        <div className="d-card">
-          <h4 className="title">Pressure</h4>
-          <h3>125</h3>
-        </div>
+  const country = countries.find((country) => country.name === coutryName);
 
-        <div className="d-card">
-          <h4 className="title">Temperature</h4>
-          <h3>42</h3>
-        </div>
+  useEffect(() => {
+    if (country) {
+      dispatch(getWeather({ lat: country.lat, lon: country.lon }));
+    }
+  }, [dispatch, country]);
 
-        <div className="d-card">
-          <h4 className="title">Wind</h4>
-          <h3>25</h3>
+  if (country && weather.name) {
+    return (
+      <>
+        <div className="details-hero">
+          <div className="title">
+            <h2>{weather.name}</h2>
+            <h3>{weather.description}</h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </>
-);
+        <div className="weather-info">
+          <div className="info">
+            <div className="d-card">
+              <h4 className="title">Humidity</h4>
+              <h3>{weather.humidity}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Pressure</h4>
+              <h3>{weather.pressure}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Temp Min</h4>
+              <h3>{weather.temp_min}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Temp Max</h4>
+              <h3>{weather.temp_max}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Feels Like</h4>
+              <h3>{weather.wind}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Wind</h4>
+              <h3>{weather.wind}</h3>
+            </div>
+
+            <div className="d-card">
+              <h4 className="title">Visibility</h4>
+              <h3>{weather.visibility}</h3>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+  return <div className="container" />;
+};
 
 export default Details;
