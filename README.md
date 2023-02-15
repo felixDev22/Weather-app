@@ -51,11 +51,11 @@ Weather-App is a React-based application that provides users with detailed infor
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-https://the-weather-app-b1ac1f.netlify.app/
+[live demo](https://the-weather-app-b1ac1f.netlify.app/)
 
 ## 🚀 Loom video <a name="Loom Video"></a>
 
-https://www.loom.com/share/d51b19bdd229421fa1bf0e0c81a7b6dd
+[Loom Video](https://www.loom.com/share/d51b19bdd229421fa1bf0e0c81a7b6dd)
 
 <!-- [Live Demo Link](https://weather-app ) -->
 
