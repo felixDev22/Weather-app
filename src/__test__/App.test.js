@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -12,7 +13,6 @@ jest.mock('../components/pages/Details');
 
 describe('Testing my App.js with pages', () => {
   test('should render the Header and Layout components', () => {
-    Homepage.mockImplementation(() => <h1>WELCOME TO AFRICA</h1>);
     render(
       <MemoryRouter initialEntries={['/']}>
         <Provider store={store}>
@@ -20,7 +20,7 @@ describe('Testing my App.js with pages', () => {
         </Provider>
       </MemoryRouter>,
     );
-    const txt = screen.getByText('WELCOME TO AFRICA');
+    const txt = screen.getByText('Weather App', { exact: false });
     expect(txt).toBeInTheDocument();
   });
 
@@ -40,7 +40,7 @@ describe('Testing my App.js with pages', () => {
   test('should render the Details Page', () => {
     Details.mockImplementation(() => <h1>Hello From Details Page</h1>);
     render(
-      <MemoryRouter initialEntries={['/details']}>
+      <MemoryRouter initialEntries={['/details/Kenya']}>
         <Provider store={store}>
           <App />
         </Provider>
