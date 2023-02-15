@@ -1,0 +1,90 @@
+.details-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background: #d3437a;
+  border-radius: 5px;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.no-data {
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #b42860;
+}
+
+.details-hero {
+  background-image: url(../../assets/Cloud03.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  margin-top: 28px;
+  min-height: 35vh;
+}
+
+.details-hero .title {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.title h3 {
+  color: #b42860;
+}
+
+.weather-info {
+  width: 100%;
+  background: #ec4c8a;
+  padding: 10px;
+}
+
+.weather-info h5 {
+  padding: 2% 5%;
+}
+
+.d-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 1rem;
+  background-color: #d23775;
+}
+
+.d-card h4 {
+  margin-left: 8px;
+}
+
+.d-card:nth-child(odd) {
+  background-color: #b42860;
+}
+
+.empty {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+  font-size: 5rem;
+}
+
+.back {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 1rem;
+}

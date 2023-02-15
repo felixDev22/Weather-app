@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --main-clr: #ec4c89;
+  --body-clr: #fd5293;
+  --hover-clr: #d14379;
+  --map-clr: #b13a68;
+}
+
+body {
+  font-family: lato, sans-serif;
+  color: white;
+  background: var(--body-clr);
+}
+
+.container {
+  min-width: 375px;
+  padding: 0 5%;
+  margin: 20px auto;
+  height: 100vh;
+}
+
+a,
+i {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 1120px) {
+  .container {
+    padding: 0 10%;
+  }
+}
